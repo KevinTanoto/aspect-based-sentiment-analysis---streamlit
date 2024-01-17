@@ -4,6 +4,8 @@ import home
 import sentimentAnalysis
 import contact
 import dashboard
+import nltkmodule
+
 st.set_page_config(layout="wide")
 page = sidebar.show()
 
