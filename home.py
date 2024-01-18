@@ -9,13 +9,13 @@ def renderPage():
                     }
                 </style>
                 """, unsafe_allow_html=True)
-    st.markdown("<h2 style=''>Analyzing The Popularity of Indonesia'S 2024 Presidential Candidates On Twitter Using Aspect Based Sentiment Analysis</h1>", unsafe_allow_html=True) 
+    st.markdown("<h2 style=''>Investigating the Challenges of Aspect-Based Sentiment Analysis on Twitter During Indonesia's 2024 Presidential Election</h1>", unsafe_allow_html=True) 
     
     st.markdown("<hr style='border:2px solid #333'>", unsafe_allow_html=True)
 
-    st.markdown("<p class='justify-text'>Di era komunikasi digital saat ini, platform media sosial telah menjadi saluran yang kuat untuk berdiskusi dan berekspresi publik.\
-                Sebagai platform sosial media, Twitter berperan penting dalam membentuk dan menggambarkan sentimen masyarakat, khususnya terkait peristiwa politik. \
-                Saat Indonesia bersiap menyambut pemilu presiden tahun 2024, memahami tren opini publik di Twitter penting untuk mendapatkan wawasan komprehensif mengenai sentimen pemilih.</p>", unsafe_allow_html=True)
+    st.markdown("<p class='justify-text'>In today's era of digital communication, social media platforms have become powerful channels for discussion and public expression.\
+                 As a social media platform, Twitter plays an important role in shaping and depicting public sentiment, especially regarding political events. \
+                 As Indonesia prepares to welcome the 2024 presidential election, understanding public opinion trends on Twitter is important to gain comprehensive insight into voter sentiment.</p>", unsafe_allow_html=True)
     st.image("images/Foto Capres - Kompas.png", caption="Surat suara paslon capres-cawapres 2024 (dok. KPU)", use_column_width=True)
 
     c1, c2, c3 = st.columns(3)
@@ -25,13 +25,13 @@ def renderPage():
         c3.image("images/wordcloud ganjar mahmud copy.png", caption="Wordcloud Visi Misi Ganjar Mahmud", use_column_width=True)
 
     numbered_list_html = """
-                        <h5>Tujuan dari penelitian ini: </h5>
+                        <h5>The aim of this research: </h5>
                         <ol>
-                            <li> Mengumpulkan dan memproses data Twitter terkait calon presiden 2024.</li>
-                            <li> Menerapkan teknik Analisis Sentimen Berbasis Aspek untuk pemeriksaan mendetail atas sentimen yang diungkapkan di Twitter.</li>
-                            <li> Mengidentifikasi dan mengkategorikan aspek-aspek kunci yang mempengaruhi sentimen masyarakat terhadap masing-masing kandidat.</li>
-                            <li> Mengukur dan membandingkan skor sentimen keseluruhan untuk setiap kandidat berdasarkan aspek yang diidentifikasi.</li>
-                            <li> Menarik kesimpulan yang bermakna dan memberikan wawasan yang dapat ditindaklanjuti bagi para ahli strategi politik dan pengambil keputusan.</li>
+                            <li>Collecting and processing Twitter data related to 2024 presidential candidates.</li>
+                             <li>Applies Aspect-Based Sentiment Analysis techniques for a detailed examination of sentiment expressed on Twitter.</li>
+                             <li>Identify and categorize key aspects that influence public sentiment towards each candidate.</li>
+                             <li>Measure and compare the overall sentiment score for each candidate based on the identified aspects.</li>
+                             <li>Draw meaningful conclusions and provide actionable insights for political strategists and decision makers.</li>
                         </ol>
                         """
     st.markdown(numbered_list_html, unsafe_allow_html=True)

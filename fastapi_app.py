@@ -25,6 +25,8 @@ def getSentiments(userText, type):
         if target_word in sent.lower():
             modified_t = sent.replace(target_word, f"{replacement_start}{target_word}{replacement_end}")
             result_text.append(modified_t)
+        else:
+            result_text.append(userText)
 
     text = sentiment_classifier.predict(
         text=result_text,

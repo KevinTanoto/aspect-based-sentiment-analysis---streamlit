@@ -59,6 +59,7 @@ def renderPage():
         df, df_sample, pos, neu, neg,  top_pos, top_neg, daily_counts_df = process_dataframe(df_prabowo)
         wc = pre_processing.wc_format(df)
         total_data = len(df_prabowo)
+        pie = "images/aniessentiment pyABSA.png"
  
     elif candidate_type == "Ganjar Pranowo":
 
@@ -66,6 +67,7 @@ def renderPage():
         df, df_sample, pos, neu, neg, top_pos, top_neg, daily_counts_df = process_dataframe(df_ganjar)
         wc = pre_processing.wc_format(df)
         total_data = len(df_ganjar)
+        pie = "images/ganjar sentiment pyABSA.png"
 
     elif candidate_type == "Anies Baswedan":
 
@@ -73,6 +75,7 @@ def renderPage():
         df, df_sample, pos, neu, neg,  top_pos, top_neg, daily_counts_df = process_dataframe(df_anies)
         wc = pre_processing.wc_format(df)
         total_data = len(df_anies)
+        pie = "images/prabowo sentiment pyABSA.png"
 
     total_data_text_box = f"""
                             <div style="
@@ -115,11 +118,12 @@ def renderPage():
         
     c3, c4 = st.columns(2)
     with st.container():
-        fig1, ax1 = plt.subplots(figsize=(7, 4))
-        c3.write("<p style='text-align: center; font-size: 20px; font-weight: bold;'>Sentiment Using VADER</p>", unsafe_allow_html=True)
-        ax1.pie([pos, neu, neg], labels=['Positive','Neutral','Negative'], autopct='%1.1f%%', startangle=90, colors = ['green', 'orange', 'red'])
-        ax1.axis('equal')
-        c3.pyplot(fig1)
+        # fig1, ax1 = plt.subplots(figsize=(7, 4))
+        c3.write(f"<p style='text-align: center; font-size: 20px; font-weight: bold;'>{candidate_type} Sentiment</p>", unsafe_allow_html=True)
+        c3.image(pie)
+        # ax1.pie([pos, neu, neg], labels=['Positive','Neutral','Negative'], autopct='%1.1f%%', startangle=90, colors = ['green', 'orange', 'red'])
+        # ax1.axis('equal')
+        # c3.pyplot(fig1)
 
         c4.write("<p style='text-align: center; font-size: 20px; font-weight: bold;'>Wordcloud</p>", unsafe_allow_html=True)
         wordcloud = WordCloud(width=1400, height=900, max_font_size=200, background_color="white", max_words = 100, scale=1.5)
