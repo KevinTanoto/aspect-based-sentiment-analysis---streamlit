@@ -6,6 +6,7 @@ import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import LabelEncoder
 from nltk.corpus import stopwords
+sentiment_classifier = APC.SentimentClassifier("\Model-PyABSA\checkpoints")
 
 def read_file(file_path):
 
@@ -15,7 +16,7 @@ def read_file(file_path):
     return my_list
 
 def getSentiments(userText, key):
-    sentiment_classifier = APC.SentimentClassifier("\Model-PyABSA\checkpoints")
+    
     replacement_start = "[B-ASP]"
     replacement_end = "[E-ASP]"
 

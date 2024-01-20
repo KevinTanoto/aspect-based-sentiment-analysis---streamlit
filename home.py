@@ -16,6 +16,8 @@ def renderPage():
     st.markdown("<p class='justify-text'>In today's era of digital communication, social media platforms have become powerful channels for discussion and public expression.\
                  As a social media platform, Twitter plays an important role in shaping and depicting public sentiment, especially regarding political events. \
                  As Indonesia prepares to welcome the 2024 presidential election, understanding public opinion trends on Twitter is important to gain comprehensive insight into voter sentiment.</p>", unsafe_allow_html=True)
+    st.markdown("<hr style='border:1px solid #333'>", unsafe_allow_html=True)
+    
     st.image("images/Foto Capres - Kompas.png", caption="Surat suara paslon capres-cawapres 2024 (dok. KPU)", use_column_width=True)
 
     c1, c2, c3 = st.columns(3)
